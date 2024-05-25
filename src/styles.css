@@ -9,20 +9,49 @@
 
 /* header */
 header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: rgb(218, 218, 218);
+  position: relative;
+}
+
+header #header-backgr {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 40vh;
+
+}
+
+.backgr-filter {
+  min-height: 40vh;
+  height: 58vh;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  box-shadow: inset -10px 60px 50px -40px rgb(255, 255, 255);
 }
 
 .header-center {
-  background-color: #000000a3;
-  width: 70%;
+  background-color: #ebebeba3;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  height: 4em;
+  justify-content: center;
+  height: 3em;
   box-shadow: var(--box-shadow);
-  border-bottom-left-radius: 10px 10px;
-  border-bottom-right-radius: 10px 10px;
+  position: absolute;
+  bottom: 0px;
+  align-items: center;
+  z-index: 2;
 }
 
 .header-center h1 {
@@ -43,15 +72,102 @@ header {
   margin: 0 10px;
 }
 
-.header-center a {
-  font-style: none;
+.header-center ul a {
+  font-weight: 600;
+  font-style: bold;
   text-decoration: none;
-  color: var(--color-primary);
+  color: #000000;
+  z-index: 5;
 }
+
+.header-center a:hover {
+  color: rgb(159, 159, 159);
+  transition: 0.2s ease 0s;
+}
+
+
+#logo {
+  width: 15rem;
+  margin: 4rem 0;
+}
+
+#shoppingCartBackgr {
+  margin-top: 4px;
+  padding: 5px;
+  height: max-content;
+}
+
+#shoppingCartBackgr:hover {
+  margin-top: 4px;
+  padding: 5px;
+  transition: all 0.2s ease 0s;
+  filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(10%) hue-rotate(90deg);
+}
+
 
 /*-------------------------------------------------------*/
 
 /* body */
+
+.search-bar-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4em;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(41, 41, 41);
+  width: fit-content;
+}
+
+.search-bar-center input {
+  width: 30rem;
+  height: 3rem;
+  padding-left: 10px;
+  border-radius: 0px;
+
+}
+
+input[type=text]:focus {
+  border-radius: 0px;
+  background-color: rgb(241, 241, 241);
+  transition: all 0.2s ease 0s;
+
+}
+
+.search-bar-center li {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px;
+  cursor: pointer;
+
+}
+
+.search-bar-center li:hover {
+  background-color: #000000;
+  transition: all 0.2s ease 0s;
+
+}
+
+.search-bar-center a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
 main {
   width: 100%;
   display: flex;
@@ -59,15 +175,13 @@ main {
 }
 
 .main-center {
-  width: 70%;
+  width: 80vw;
   min-height: 20px;
-  padding: 1em;
+  padding: 1rem;
   margin-top: 10%;
   box-shadow: var(--box-shadow);
-  border-bottom-left-radius: 10px 10px;
-  border-bottom-right-radius: 10px 10px;
-  border-top-left-radius: 10px 10px;
-  border-top-right-radius: 10px 10px;
+  border-radius: 10px 10px;
+
   display: flex;
   justify-content: center;
 }
@@ -96,6 +210,102 @@ main {
 
 
 /* footer */
+footer {
+  width: 100%;
+  /* background-color: #0A323C; */
+  background-color: #20516c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+}
 
+.footer-center {
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+/* --------------------------------------- */
+
+footer .menu {
+  background-color: rgba(255, 0, 0, 0.197);
+  width: 20rem;
+  height: 25rem;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+footer .menu ul {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+footer .menu li {
+  list-style: none;
+}
+
+footer .menu h4 {
+  position: absolute;
+  color: white;
+  top: 3rem;
+}
+
+footer li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ---------------------------------------- */
+footer .contact {
+  background-color: rgba(0, 0, 255, 0.329);
+  width: 20rem;
+  height: 25rem;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+footer .contact ul {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+footer .contact li {
+  list-style: none;
+}
+
+footer .contact h4 {
+  color: white;
+  top: 3rem;
+  position: absolute;
+}
+
+footer .contact a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ---------------------------------------- */
+footer .sign-up {
+  background-color: rgba(111, 255, 0, 0.14);
+  width: 20rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 /*-------------------------------------------------------*/
