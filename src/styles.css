@@ -15,7 +15,7 @@ header {
   align-items: center;
 }
 
-.menu {
+header .menu {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -29,11 +29,11 @@ header #header-backgr {
   background-position: center;
   background-size: cover;
   min-height: 40vh;
-
+  z-index: -0;
 }
 
 .backgr-filter {
-  min-height: 40vh;
+  max-height: 40vh;
   height: 58vh;
   width: 100%;
   z-index: 1;
@@ -132,11 +132,10 @@ header #header-backgr {
 
 }
 
-input[type=text]:focus {
+.search-bar-center input[type=text]:focus {
   border-radius: 0px;
   background-color: rgb(241, 241, 241);
   transition: all 0.2s ease 0s;
-
 }
 
 .search-bar-center li {
@@ -148,13 +147,11 @@ input[type=text]:focus {
   justify-content: center;
   border-radius: 0px;
   cursor: pointer;
-
 }
 
 .search-bar-center li:hover {
   background-color: #000000;
   transition: all 0.2s ease 0s;
-
 }
 
 .search-bar-center a {
@@ -162,10 +159,6 @@ input[type=text]:focus {
   align-items: center;
   justify-content: center;
 }
-
-
-
-
 
 
 main {
@@ -231,7 +224,7 @@ footer {
 /* --------------------------------------- */
 
 footer .menu {
-  background-color: rgba(255, 0, 0, 0.197);
+  /* background-color: rgba(255, 0, 0, 0.197); */
   width: 20rem;
   height: 25rem;
   display: flex;
@@ -265,7 +258,7 @@ footer li a {
 
 /* ---------------------------------------- */
 footer .contact {
-  background-color: rgba(0, 0, 255, 0.329);
+  /* background-color: rgba(0, 0, 255, 0.329); */
   width: 20rem;
   height: 25rem;
   display: flex;
@@ -299,13 +292,51 @@ footer .contact a {
 
 /* ---------------------------------------- */
 footer .sign-up {
-  background-color: rgba(111, 255, 0, 0.14);
+  /* background-color: rgba(111, 255, 0, 0.14); */
   width: 20rem;
   height: 25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.email-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(41, 41, 41);
+  width: fit-content;
+}
+
+.email-input li {
+  height: 2rem;
+  width: 2rem;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.email-input a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-input input {
+  width: 15rem;
+  height: 2rem;
+  padding-left: 10px;
+  border-radius: 0px;
+}
+
+.email-input input[type=text]:focus {
+  border-radius: 0px;
+  background-color: rgb(241, 241, 241);
+  transition: all 0.2s ease 0s;
 }
 
 /*-------------------------------------------------------*/
