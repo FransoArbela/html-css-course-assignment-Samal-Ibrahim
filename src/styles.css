@@ -13,6 +13,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 header .menu {
@@ -81,7 +82,7 @@ header #header-backgr {
 }
 
 .header-center a:hover {
-  color: rgb(159, 159, 159);
+  color: var(--color-secondary);
   transition: 0.2s ease 0s;
 }
 
@@ -100,9 +101,46 @@ header #header-backgr {
 #shoppingCartBackgr:hover {
   margin-top: 4px;
   padding: 5px;
-  transition: all 0.2s ease 0s;
-  filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(10%) hue-rotate(90deg);
+  transition: all 0.3s ease 0s;
+  filter: invert(80%) sepia(39%) saturate(3482%) hue-rotate(320deg) brightness(100%) contrast(102%);
 }
+
+.burger-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  padding: 0;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  /* display: none; */
+}
+
+.burger-button span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.burger-button.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.burger-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-button.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
 
 
 /*-------------------------------------------------------*/
@@ -150,7 +188,7 @@ header #header-backgr {
 }
 
 .search-bar-center li:hover {
-  background-color: #000000;
+  background-color: #ff9457;
   transition: all 0.2s ease 0s;
 }
 
@@ -201,44 +239,83 @@ main {
 
 /*-------------------------------------------------------*/
 
-
 /* footer */
+
+/* common codes */
+footer .menu,
+.contact,
+.sign-up {
+  width: 20rem;
+  height: 15rem;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+footer li a:hover {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-size: 0.8rem;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+/* ************ */
+
+
+
 footer {
   width: 100%;
-  /* background-color: #0A323C; */
-  background-color: #20516c;
+  background-color: #0a3641;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 25rem;
 }
 
-.footer-center {
-  width: 80vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 
+.footer-align {
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-center {
+  width: 75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  padding-top: 30px;
+  /* background-color: red; */
 }
 
 /* --------------------------------------- */
 
 footer .menu {
   /* background-color: rgba(255, 0, 0, 0.197); */
-  width: 20rem;
-  height: 25rem;
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  justify-content: space-evenly;
-  position: relative;
 }
 
 footer .menu ul {
   height: 20vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  gap: 2rem;
 }
 
 footer .menu li {
@@ -246,33 +323,20 @@ footer .menu li {
 }
 
 footer .menu h4 {
-  position: absolute;
   color: white;
-  top: 3rem;
-}
-
-footer li a {
-  text-decoration: none;
-  color: white;
+  /* top: 2rem; */
 }
 
 /* ---------------------------------------- */
 footer .contact {
   /* background-color: rgba(0, 0, 255, 0.329); */
-  width: 20rem;
-  height: 25rem;
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  justify-content: space-evenly;
-  position: relative;
 }
 
 footer .contact ul {
   height: 20vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  gap: 2rem;
 }
 
 footer .contact li {
@@ -282,31 +346,50 @@ footer .contact li {
 footer .contact h4 {
   color: white;
   top: 3rem;
-  position: absolute;
 }
 
-footer .contact a {
-  text-decoration: none;
-  color: white;
-}
 
 /* ---------------------------------------- */
 footer .sign-up {
   /* background-color: rgba(111, 255, 0, 0.14); */
-  width: 20rem;
-  height: 25rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
+}
+
+.sign-up h5 {
+  color: white;
 }
 
 .email-input {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(41, 41, 41);
+  background-color: rgba(41, 41, 41, 0);
   width: fit-content;
+}
+
+#signup-input {
+  width: 15rem;
+  height: 2rem;
+  padding-left: 10px;
+  border-radius: 0px;
+  border: none;
+  appearance: none;
+  outline: none;
+  border: 1px rgba(178, 178, 178, 0.531) solid;
+  background-color: transparent;
+}
+
+
+#signup-input:focus::placeholder {
+  color: #8a8a8a;
+}
+
+#signup-input::placeholder {
+  color: #bdbdbd;
+  transition: color 0.3s ease;
 }
 
 .email-input li {
@@ -326,17 +409,188 @@ footer .sign-up {
   justify-content: center;
 }
 
-.email-input input {
-  width: 15rem;
-  height: 2rem;
-  padding-left: 10px;
-  border-radius: 0px;
+
+#footer-line {
+  width: 75rem;
 }
 
-.email-input input[type=text]:focus {
-  border-radius: 0px;
-  background-color: rgb(241, 241, 241);
-  transition: all 0.2s ease 0s;
+.space-line {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 2rem;
+  width: 100%;
 }
 
 /*-------------------------------------------------------*/
+
+
+
+/* footer buttom  */
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bottom-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75rem;
+  bottom: 1rem;
+  /* background-color: red; */
+}
+
+.sign-up li:hover {
+  background-color: #ff9457;
+  transition: all 0.2s ease 0s;
+}
+
+footer footer #payment-methods {
+  bottom: 3rem;
+  height: 1.5rem;
+}
+
+.quick-contact p {
+  color: rgba(255, 255, 255, 0.625);
+  font-size: 0.8rem;
+}
+
+
+/*-------------------------------------------------------*/
+
+
+/* media query for smaller screen sizes */
+
+@media (max-width: 600px) {
+  header {
+    display: flex;
+  }
+
+  header #logo {
+    width: 6rem;
+  }
+
+  header .menu {
+    width: 100%;
+    background-color: blue;
+  }
+
+  .header-center {
+    display: none;
+  }
+
+  .burger-button {}
+
+  /* Footer */
+
+  footer {
+    height: 35rem;
+    align-items: end;
+  }
+
+  .footer-align {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 35rem;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: fit-content;
+    justify-content: space-evenly;
+    margin: 0;
+    height: 30rem;
+    gap: 0;
+  }
+
+  footer .menu,
+  .contact,
+  .sign-up {
+    width: 100%;
+    height: fit-content;
+    gap: 0;
+    height: 13rem;
+    justify-content: space-evenly;
+    padding-left: 1rem;
+    border-bottom: 2px rgba(255, 255, 255, 0.282) solid;
+  }
+
+  footer .menu {
+    justify-content: space-between;
+  }
+
+  footer .menu,
+  .contact h4 {
+    font-size: 0.8rem;
+  }
+
+  footer .menu ul {
+    height: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  footer .contact {
+    display: flex;
+  }
+
+  footer .contact h4 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .contact ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0;
+    height: 7rem;
+  }
+
+
+  .sign-up {
+    gap: 1rem;
+  }
+
+  footer li a {
+    font-size: 0.8rem;
+  }
+
+  footer .menu ul {
+    gap: 0;
+  }
+
+  .main-footer {
+    height: 35rem;
+  }
+
+
+  .space-line {
+    display: none;
+  }
+
+  .footer-bottom {
+    height: 4rem;
+  }
+
+  .footer-bottom-center {
+    padding-left: 1rem;
+  }
+
+  .quick-contact p {
+    font-size: 0.5rem;
+  }
+}
+
+/*-------------------------------------------------------*/
+
+#mobile-menu-backgr {
+  width: 70%;
+  height: 100vh;
+  background-color: gray;
+}
