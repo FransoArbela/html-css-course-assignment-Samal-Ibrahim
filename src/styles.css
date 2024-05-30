@@ -16,30 +16,14 @@ header {
   position: relative;
 }
 
-header .menu {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: rgb(218, 218, 218);
-  position: relative;
-}
-
-header #header-backgr {
-  position: relative;
+.hero-img {
+  background-color: #ff9457;
+  background-image: url("/assets/background.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  min-height: 40vh;
-  z-index: -0;
-}
-
-.backgr-filter {
-  max-height: 40vh;
-  height: 58vh;
   width: 100%;
-  z-index: 1;
-  position: absolute;
-  box-shadow: inset -10px 60px 50px -40px rgb(255, 255, 255);
+  height: 50vh;
 }
 
 .header-center {
@@ -228,7 +212,7 @@ main {
 }
 
 .main-center p {
-  max-width: 41.667vw;
+  width: 41.667vw;
   font-family: "Encode Sans Expanded", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -378,7 +362,7 @@ footer .sign-up {
   border: none;
   appearance: none;
   outline: none;
-  border: 1px rgba(178, 178, 178, 0.531) solid;
+  /* border: 1px rgba(178, 178, 178, 0.531) solid; */
   background-color: transparent;
 }
 
@@ -431,6 +415,7 @@ footer .sign-up {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: antiquewhite;
 }
 
 .footer-bottom-center {
@@ -463,13 +448,47 @@ footer footer #payment-methods {
 
 /* media query for smaller screen sizes */
 
+@media (max-width: 758px) {
+
+  footer .menu,
+  .contact,
+  .sign-up {
+    width: 100%;
+    height: fit-content;
+    gap: 0;
+    height: 13rem;
+    justify-content: space-evenly;
+    padding-left: 1rem;
+  }
+
+  footer h4,
+  h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 758px) {
+
+
+  footer h4,
+  h5 {
+    font-size: 0.8rem;
+  }
+}
+
 @media (max-width: 600px) {
+
+  /* header  */
   header {
     display: flex;
   }
 
   header #logo {
     width: 6rem;
+  }
+
+  .hero-img {
+    height: 30vh;
   }
 
   header .menu {
@@ -482,6 +501,45 @@ footer footer #payment-methods {
   }
 
   .burger-button {}
+
+  /* search bar */
+  .search-bar {
+    height: 1.5rem;
+    background-color: red;
+
+  }
+
+  .search-bar-center input {
+    width: 15rem;
+    height: 1.5rem;
+    padding-left: 10px;
+    border-radius: 0px;
+
+  }
+
+  .search-bar-center li {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  /* body */
+
+  .content-center {
+    /* background-color: rgba(0, 255, 255, 0.76); */
+    width: 20rem;
+  }
+
+  .content-center h1 {
+    font-size: 1.75rem;
+    width: 15rem;
+    /* background-color: rgb(153, 192, 57); */
+  }
+
+  .content-center p {
+    font-size: 1rem;
+    /* background-color: #ff9457; */
+    width: 15rem;
+  }
 
   /* Footer */
 
@@ -518,7 +576,6 @@ footer footer #payment-methods {
     height: 13rem;
     justify-content: space-evenly;
     padding-left: 1rem;
-    border-bottom: 2px rgba(255, 255, 255, 0.282) solid;
   }
 
   footer .menu {
