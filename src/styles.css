@@ -415,7 +415,7 @@ footer .sign-up {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 
 .footer-bottom-center {
