@@ -229,7 +229,7 @@ main {
 footer .menu,
 .contact,
 .sign-up {
-  width: 20rem;
+  width: 20vw;
   height: 15rem;
   display: flex;
   align-items: start;
@@ -282,17 +282,16 @@ footer {
 .footer-center {
   width: 75rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: fit-content;
   padding-top: 30px;
-  /* background-color: red; */
 }
 
 /* --------------------------------------- */
 
 footer .menu {
-  /* background-color: rgba(255, 0, 0, 0.197); */
+  background-color: rgba(255, 0, 0, 0.197);
 }
 
 footer .menu ul {
@@ -313,7 +312,7 @@ footer .menu h4 {
 
 /* ---------------------------------------- */
 footer .contact {
-  /* background-color: rgba(0, 0, 255, 0.329); */
+  background-color: rgba(0, 0, 255, 0.329);
 }
 
 footer .contact ul {
@@ -335,7 +334,7 @@ footer .contact h4 {
 
 /* ---------------------------------------- */
 footer .sign-up {
-  /* background-color: rgba(111, 255, 0, 0.14); */
+  background-color: rgba(111, 255, 0, 0.14);
   display: flex;
   justify-content: center;
   align-items: start;
@@ -355,8 +354,8 @@ footer .sign-up {
 }
 
 #signup-input {
-  width: 15rem;
-  height: 2rem;
+  width: 15vw;
+  height: 2vw;
   padding-left: 10px;
   border-radius: 0px;
   border: none;
@@ -453,7 +452,7 @@ footer footer #payment-methods {
   footer .menu,
   .contact,
   .sign-up {
-    width: 100%;
+    /* width: 100%; */
     height: fit-content;
     gap: 0;
     height: 13rem;
@@ -468,7 +467,6 @@ footer footer #payment-methods {
 }
 
 @media (max-width: 758px) {
-
 
   footer h4,
   h5 {
@@ -570,7 +568,7 @@ footer footer #payment-methods {
   footer .menu,
   .contact,
   .sign-up {
-    width: 100%;
+    /* width: 100%; */
     height: fit-content;
     gap: 0;
     height: 13rem;
