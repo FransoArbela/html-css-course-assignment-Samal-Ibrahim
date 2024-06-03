@@ -202,7 +202,7 @@ main .hero-main {
 }
 
 main .hero-main-backgr {
-    background-image: url("/assets/hero-background.png");
+    background-image: url("html-css-course-assignment-Samal-Ibrahim/assets/hero-background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -412,7 +412,7 @@ main .product-colors .orange {
 footer {
     width: 100%;
     background-color: #0a3641;
-    padding: 70px 0 0px 0;
+    padding: 70px 0 50px 0;
 }
 
 footer .footer-align {
