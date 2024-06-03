@@ -220,29 +220,32 @@ main .hero-main-backgr {
     z-index: 1;
     width: fit-content;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
     height: 100%;
-    top: 25%;
+    align-content: space-around;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
 }
+
 
 .hero-main-content h1 {
     color: white;
     width: fit-content;
+    text-align: center;
+    align-self: end;
 }
 
 .hero-main-content p {
     color: white;
     width: fit-content;
     text-align: center;
+    align-self: start;
 }
 
 .hero-main-content button {
-    position: relative;
     background-color: rgba(241, 241, 241, 0.821);
-    top: 15%;
     width: 10rem;
     height: 2rem;
     outline: none;
@@ -250,6 +253,7 @@ main .hero-main-backgr {
     border: 2px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    align-self: end;
 }
 
 .hero-main-content button:hover {
@@ -546,7 +550,6 @@ footer .footer-bottom p {
 /* --------------------------------------- */
 
 @media(max-width: 1166px) {
-    .main-center {}
 
     .main-center .content-center {
         width: 80%;
@@ -560,25 +563,21 @@ footer .footer-bottom p {
         width: 80%;
     }
 
+    .footer-bottom #payment-methods {
+        height: 1.3rem;
+    }
+
     footer .cards {
         width: 50%;
         margin-bottom: 30px;
     }
+
+    .footer-bottom .quick-contact p {
+        font-size: 10px;
+    }
 }
 
 @media(max-width: 574px) {
-    .main-center {
-        width: 100vw;
-        justify-content: start;
-    }
-
-    .main-center .content-center {
-        width: 80%;
-    }
-
-    .main-center .content-center img {
-        width: 250px;
-    }
 
     .main-center .content-center p {
         width: 80%;
@@ -593,11 +592,56 @@ footer .footer-bottom p {
     }
 }
 
-@media(max-width: 375px) {
+@media(max-width: 570px) {
     .main-center {
         width: 100vw;
         justify-content: start;
     }
+
+    .main-center .content-center {
+        width: 80%;
+    }
+
+    .main-center .content-center img {
+        width: 250px;
+    }
+
+    .main-center .content-center p {
+        width: 80%;
+    }
+
+    .header-center {
+        display: none;
+    }
+
+    .search-bar input {
+        width: 18rem;
+    }
+
+    footer .cards {
+        width: 100%;
+    }
+
+
+    .footer-bottom #payment-methods {
+        height: 1.3rem;
+    }
+
+    .footer-bottom .quick-contact p {
+        font-size: 8px;
+    }
+}
+
+@media(max-width: 375px) {
+
+    .hero-main-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-main-content p {
+        font-size: 0.8rem;
+    }
+
 
     .main-center .content-center {
         width: 80%;
