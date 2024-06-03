@@ -18,7 +18,7 @@ header {
 
 .hero-img {
     background-color: #c0c0c0;
-    background-image: url("/assets/background.png");
+    background-image: url("../assets/background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -202,7 +202,7 @@ main .hero-main {
 }
 
 main .hero-main-backgr {
-    background-image: url("html-css-course-assignment-Samal-Ibrahim/assets/hero-background.png");
+    background-image: url("../assets/hero-background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
