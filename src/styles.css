@@ -18,7 +18,7 @@ header {
 
 .hero-img {
     background-color: #c0c0c0;
-    background-image: url("assets/hero-background.png");
+    background-image: url("./assets/hero-background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
