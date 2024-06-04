@@ -114,6 +114,10 @@ header {
     border-radius: 2px;
 }
 
+.burger-button.active {
+    position: fixed;
+}
+
 .burger-button.active span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
     background-color: #ffffffe0;
@@ -140,6 +144,7 @@ header {
     background-color: #0a3641;
     padding-top: 120px;
     z-index: 3;
+    overflow: hidden;
 }
 
 .mobile-nav ul {
