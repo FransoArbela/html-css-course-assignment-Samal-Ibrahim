@@ -101,8 +101,8 @@ header {
     padding: 0;
     position: absolute;
     top: 2rem;
-    right: 1rem;
-    display: none;
+    right: 100%;
+    z-index: 3;
 }
 
 .burger-button span {
@@ -111,10 +111,12 @@ header {
     height: 4px;
     background-color: #333;
     transition: transform 0.3s, opacity 0.3s;
+    border-radius: 2px;
 }
 
 .burger-button.active span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
+    background-color: #ffffffe0;
 }
 
 .burger-button.active span:nth-child(2) {
@@ -122,10 +124,52 @@ header {
 }
 
 .burger-button.active span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-11px) rotate(-45deg);
+    background-color: #ffffffe0;
+
+
 }
 
+.mobile-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #0a3641;
+    padding-top: 120px;
+    z-index: 3;
+}
 
+.mobile-nav ul {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.mobile-nav li {
+    list-style: none;
+}
+
+.mobile-nav a {
+    display: block;
+    text-align: center;
+    width: 15rem;
+    color: white;
+    text-decoration: none;
+
+}
+
+.mobile-nav hr {
+    padding: 0;
+    margin: 3rem 0;
+    color: #ffffff8c;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+    transition: 0.3s linear;
+}
 
 /*-------------------------------------------------------*/
 
@@ -212,7 +256,7 @@ main .hero-main-backgr {
     height: 70vh;
     filter: brightness(70%);
     position: absolute;
-    z-index: 1;
+    z-index: 0;
 }
 
 .hero-main-content {
@@ -614,6 +658,16 @@ footer .footer-bottom p {
         display: none;
     }
 
+    .burger-button {
+        right: 1rem;
+        z-index: 4;
+    }
+
+    /* 
+    .mobile-nav {
+        left: 0;
+    } */
+
     .search-bar input {
         width: 18rem;
     }
@@ -667,7 +721,8 @@ footer .footer-bottom p {
         width: 100%;
     }
 
-    .footer-bottom {}
+    /* 
+    .footer-bottom {} */
 
     .footer-bottom #payment-methods {
         height: 1.3rem;

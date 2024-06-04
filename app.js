@@ -1,6 +1,31 @@
-        document.querySelector('.burger-button').addEventListener('click', function() {
-            this.classList.toggle('active');
-            var menuBackGr = document.createElement('div');
-            menuBackGr.className = 'mobile-menu-backgr';
-            body.appendChild(menuBackGr);
-        });
+
+window.onload = function ( ) {
+    const burger_button = document.querySelector('.burger-button');
+    const mobile_nav = document.querySelector('.mobile-nav');
+    burger_button.addEventListener('click', function(){
+        burger_button.classList.toggle('active');
+        burger_button.style.backGroundColor = 'white';
+        mobile_nav.classList.toggle('is-active');
+    });
+}
+    
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
