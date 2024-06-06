@@ -1,0 +1,196 @@
+main .hero-main-backgr {
+    background-image: url("../assets/hero-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    filter: brightness(70%);
+    position: absolute;
+    z-index: 0;
+}
+
+.hero-main-content {
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    margin: 0 auto;
+    display: grid;
+    height: 100%;
+    align-content: space-around;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+}
+
+
+.hero-main-content h1 {
+    color: white;
+    width: fit-content;
+    text-align: center;
+    align-self: end;
+}
+
+.hero-main-content p {
+    color: white;
+    width: fit-content;
+    text-align: center;
+    align-self: start;
+}
+
+.hero-main-content button {
+    background-color: rgba(241, 241, 241, 0.821);
+    width: 10rem;
+    height: 2rem;
+    outline: none;
+    border-radius: 2px;
+    border: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    align-self: end;
+}
+
+.hero-main-content button:hover {
+    background-color: #0d83a0dc;
+    color: white;
+}
+
+main .discount-card {
+    background-color: #C3F0BC;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
+main .discount-card .discount-content {
+    /* background-color: #25cd0b; */
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 18rem;
+    justify-content: space-evenly;
+}
+
+main .discount-content p {
+    margin-top: 1rem;
+}
+
+main .discount-content h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.discount-card button {
+    background-color: rgba(241, 241, 241, 0.821);
+    width: 10rem;
+    height: 2rem;
+    outline: none;
+    border-radius: 2px;
+    border: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 2rem;
+}
+
+.discount-card button:hover {
+    background-color: #0d83a0dc;
+    color: white;
+}
+
+main .product-cards {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+main .product-cards a {
+    text-decoration: none;
+
+}
+
+
+main .cards-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .product-cards .box {
+    height: 27rem;
+    width: 20rem;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+main .cards-info img {
+    height: 15rem;
+    margin-top: 2rem;
+}
+
+main .product-choices {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-choices .stars {
+    margin-top: 5px;
+}
+
+.product-choices h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+}
+
+.product-choices h5 {
+    font-size: 0.8rem;
+    color: black;
+}
+
+.product-colors {
+    display: flex;
+}
+
+main .circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: none;
+}
+
+main .product-colors .red {
+    background-color: red;
+}
+
+main .product-colors .green {
+    background-color: rgb(0, 255, 0);
+}
+
+main .product-colors .blue {
+    background-color: blue;
+}
+
+main .product-colors .yellow {
+    background-color: rgb(246, 255, 0);
+}
+
+main .product-colors .black {
+    background-color: black;
+}
+
+main .product-colors .orange {
+    background-color: orange;
+}
