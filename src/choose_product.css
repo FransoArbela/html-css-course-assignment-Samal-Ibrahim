@@ -108,6 +108,11 @@
 
 
 
+.add-to-cart button a {
+    text-decoration: none;
+    color: white;
+}
+
 .add-to-cart button {
     background-color: #0a3641;
     width: 15rem;
