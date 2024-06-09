@@ -1,6 +1,9 @@
 /* Use this file to store your useful variables */
 /* This could be colors, fonts, or padding sizes! */
 
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 :root {
   --color-primary: #eff0e5;
   --color-secondary: #0d83a0dc;

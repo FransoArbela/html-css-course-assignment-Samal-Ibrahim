@@ -6,8 +6,10 @@
 
 /* Feel free to add as many of these imports as you need */
 
+/* additional css files */
 @import url('./choose_product.css');
 @import url('./home_display.css');
+@import url('./check_out.css');
 
 
 /* header */
